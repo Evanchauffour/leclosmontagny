@@ -1,6 +1,9 @@
 <?php
     // Header
     get_header();
+
+    // Houses
+    $houses = get_field('houses');
 ?>
 
 <div class="home">
@@ -10,19 +13,25 @@
     </div>
 </div>
 <div class="container-infos-gites">
-    <div class="info-gite">
-        <img src="http://127.0.0.1/leclosmontagny/wp-content/themes/leclosmontagny/assets/img/maison-florence.jpg" alt="">
-        <div class="text-info-gite">
-            <h3>LA MAISON<br> DE<span>Florence</span></h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo odio magni ullam, doloribus non necessitatibus asperiores corporis. Quod quia vero ipsum doloremque ullam. Ratione facere cum et, placeat similique quae!</p>
-            <a href="">DÉCOUVRIR</a>
+<?php 
+    foreach($houses as $house):
+    $image = $house['image']
+?>
+        <div class="info-gite">
+            <img src="<?php echo($house['image']['url']); ?>" height="" width="" alt="<?php echo esc_attr($image['alt']);?>">
+            <div class="text-info-gite">
+                <h3><?php echo($house['title']) ?><span><?php echo($house['name']) ?></span></h3>
+                <p><?php echo($house['text']) ?></p>
+                <a href="">DÉCOUVRIR</a>
+            </div>
         </div>
-    </div>
-    <div class="info-gite nivolet">
+<?php endforeach; ?>
+</div>
+    <!-- <div class="info-gite nivolet">
         <img src="http://127.0.0.1/leclosmontagny/wp-content/themes/leclosmontagny/assets/img/minia-pavillon-nivolet.jpg" alt="">
         <div class="text-info-gite">
             <h3>LE PAVILLON<br> DU <span>Nivolet</span></h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo odio magni ullam, doloribus non necessitatibus asperiores corporis. Quod quia vero ipsum doloremque ullam. Ratione facere cum et, placeat similique quae!</p>
+            <p></p>
             <a href="">DÉCOUVRIR</a>
         </div>
     </div>
@@ -30,10 +39,10 @@
             <img src="http://127.0.0.1/leclosmontagny/wp-content/themes/leclosmontagny/assets/img/minia-pavillon-nivolet.jpg" alt="">
             <div class="text-info-gite">
             <h3>LE PAVILLON<br> DU <span>Granier</span></h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo odio magni ullam, doloribus non necessitatibus asperiores corporis. Quod quia vero ipsum doloremque ullam. Ratione facere cum et, placeat similique quae!</p>
+            <p></p>
             <a href="">DÉCOUVRIR</a>
         </div>
-    </div>
+    </div> -->
 </div>
 <div class="container-about_us">
     <h1 class="title-home">En <span>famille</span>, entre <span>amis</span> ou pour un événement <span>professionnel</span>, nous créons le fil de votre lien...</h1>

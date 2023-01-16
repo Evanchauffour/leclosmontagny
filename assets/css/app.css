@@ -153,8 +153,9 @@ body {
   z-index: -1;
 }
 
-.info-gite {
+.info-gite:nth-child(odd) {
   display: flex;
+  flex-direction: row;
   align-items: center;
   width: 100vw;
   height: 550px;
@@ -176,7 +177,7 @@ body {
   color: #9A4837;
   font-family: montserrat-medium;
   font-size: 24px;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
   line-height: 50px;
 }
 .text-info-gite span {
@@ -211,8 +212,13 @@ body {
   height: 100%;
 }
 
-.nivolet {
+.info-gite:nth-child(even) {
+  display: flex;
   flex-direction: row-reverse;
+  align-items: center;
+  width: 100vw;
+  height: 550px;
+  margin-bottom: 100px;
 }
 
 .container-about_us {

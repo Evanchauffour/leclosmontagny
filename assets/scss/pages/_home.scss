@@ -89,8 +89,9 @@ body{
     z-index: -1;
 }
 
-.info-gite{
+.info-gite:nth-child(odd){
     display: flex;
+    flex-direction: row;
     align-items: center;
     width: 100vw;
     height: 550px;
@@ -152,8 +153,13 @@ body{
     }
 }
 
-.nivolet{
+.info-gite:nth-child(even){
+    display: flex;
     flex-direction: row-reverse;
+    align-items: center;
+    width: 100vw;
+    height: 550px;
+    margin-bottom: 100px;
 }
 
 .container-about_us{
