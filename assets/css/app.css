@@ -172,13 +172,14 @@ body {
   margin-left: 100px;
   font-family: montserrat-medium;
 }
-.text-info-gite h3 {
+.text-info-gite h3:not(span) {
   position: relative;
   color: #9A4837;
   font-family: montserrat-medium;
   font-size: 24px;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
   line-height: 50px;
+  text-transform: uppercase;
 }
 .text-info-gite span {
   position: absolute;
@@ -189,6 +190,7 @@ body {
   font-size: 95px;
   font-family: rouge;
   font-weight: 100;
+  text-transform: capitalize;
 }
 .text-info-gite p {
   margin-bottom: 60px;
@@ -282,8 +284,27 @@ body {
   margin-top: 200px;
 }
 
-.citation {
+.citation:nth-child(odd) {
   display: flex;
+}
+
+.citation:nth-child(even) {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.citation:nth-child(even) .text-citation {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.citation:nth-child(even) img {
+  margin-right: 60px;
+  margin-left: 30px;
+}
+
+.citation {
+  margin-bottom: 70px;
 }
 .citation img {
   width: 250px;
@@ -301,23 +322,6 @@ body {
   font-size: 16px;
   width: 40%;
   line-height: 28px;
-}
-
-.second-citation {
-  margin-top: 70px;
-  flex-direction: row-reverse;
-}
-.second-citation img {
-  width: 250px;
-  height: 250px;
-  margin-left: 30px;
-  margin-right: 60px;
-}
-.second-citation .text-citation {
-  text-align: right;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
 }
 
 .back-to-top {
