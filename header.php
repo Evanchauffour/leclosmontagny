@@ -9,7 +9,7 @@
 </head>
 <body>
 <header>
-        <a href=""><img src="http://127.0.0.1/leclosmontagny/wp-content/themes/leclosmontagny/assets/img/logo.svg" alt="logo"></a>
+        <a href=""><img src="<?php echo(get_template_directory_uri()); ?>/assets/img/logo.svg" alt="logo"></a>
     <nav>
         <a href="">Accueil</a>
         <a href="">Nos Gites</a>
