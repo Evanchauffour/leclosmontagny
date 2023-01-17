@@ -91,6 +91,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
+  width: 100%;
 }
 
 .discover h1 {
@@ -126,6 +127,8 @@ body {
   font-size: 36px;
   font-weight: 100;
   margin-bottom: 10vh;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 .title-home span {
   position: relative;
@@ -147,12 +150,6 @@ body {
   position: relative;
 }
 
-.lien {
-  position: absolute;
-  top: 5%;
-  z-index: -1;
-}
-
 .info-gite:nth-child(odd) {
   display: flex;
   flex-direction: row;
@@ -168,8 +165,12 @@ body {
 }
 
 .text-info-gite {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   width: 40%;
-  margin-left: 100px;
+  height: 100%;
+  margin-left: 5%;
   font-family: montserrat-medium;
 }
 .text-info-gite h3:not(span) {
@@ -177,14 +178,13 @@ body {
   color: #9A4837;
   font-family: montserrat-medium;
   font-size: 24px;
-  margin-bottom: 100px;
   line-height: 50px;
   text-transform: uppercase;
 }
 .text-info-gite span {
   position: absolute;
   top: 100%;
-  left: 10%;
+  left: 50px;
   transform: translateY(-50%);
   color: black;
   font-size: 95px;
@@ -193,7 +193,6 @@ body {
   text-transform: capitalize;
 }
 .text-info-gite p {
-  margin-bottom: 60px;
   font-size: 16px;
   line-height: 28px;
   width: 70%;
@@ -202,15 +201,15 @@ body {
   position: relative;
   text-decoration: none;
   color: black;
+  display: inline-block;
 }
 .text-info-gite a::after {
   content: "";
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  left: -10%;
   background-image: url(../img/pink-bg.svg);
   background-size: cover;
-  width: 130%;
+  width: 50%;
   height: 100%;
 }
 
@@ -225,6 +224,7 @@ body {
 
 .container-about_us {
   width: 100vw;
+  height: auto;
 }
 
 .container-video-about_us {
@@ -232,6 +232,9 @@ body {
 }
 
 .text-info-video-about_us {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   width: 40%;
   margin-left: 100px;
   font-family: montserrat-medium;
@@ -241,13 +244,12 @@ body {
   color: #9A4837;
   font-family: montserrat-medium;
   font-size: 24px;
-  margin-bottom: 100px;
   line-height: 50px;
 }
 .text-info-video-about_us span {
   position: absolute;
   top: 100%;
-  left: 10%;
+  left: 70px;
   transform: translateY(-50%);
   color: black;
   font-size: 95px;
@@ -255,7 +257,6 @@ body {
   font-weight: 100;
 }
 .text-info-video-about_us p {
-  margin-bottom: 60px;
   font-size: 16px;
   line-height: 28px;
   width: 70%;
@@ -277,7 +278,9 @@ body {
 }
 
 .container-video-about_us img {
-  width: 45%;
+  width: 700px;
+  height: 400px;
+  margin-right: 50px;
 }
 
 .container-citation {
