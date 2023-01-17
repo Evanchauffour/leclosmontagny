@@ -1,3 +1,96 @@
 .container-gite{
-    
+    margin: 0 100px;
+    margin-top: 100px;
+
+    h1:not(span){
+        position: relative;
+        color: #9A4837;
+        font-family: montserrat-medium;
+        font-size: 24px;
+        line-height: 50px;
+        text-transform: uppercase;
+    }
+
+    span{
+        position: absolute;
+        top: 100%;
+        left: 50px;
+        transform: translateY(-50%);
+        color: black;
+        font-size: 95px;
+        font-family: rouge;
+        font-weight: 100;
+        text-transform: capitalize;
+    }
+
+    h2{
+        position: relative;
+        font-family: montserrat-semibold;
+        font-size: 20px;
+        display: inline;
+    }
+
+    h2::after{
+        content:'';
+        position: absolute;
+        top: 130%;
+        left: 20%;
+        width: 100%;
+        height: 2px;
+        background-color: #9A4837;
+    }
+
+    .container-img-gallery{
+        display: grid; 
+        grid-template-columns: 1fr 1fr 1fr; 
+        grid-template-rows: 1fr 1fr; 
+        gap: 8px 8px; 
+        grid-template-areas: 
+        "img1 img2 img3"
+        "img1 img2 img4"; 
+        margin-top: 100px;
+        width: 100%;
+        height: 350px;
+
+        div:nth-child(1) { grid-area: img1;  height: 350px;}
+        div:nth-child(2) { grid-area: img2;  height: 350px;}
+        div:nth-child(3) { grid-area: img3;  height: calc(350px / 2 - 4px);}
+        div:nth-child(4) { grid-area: img4;  height: calc(350px / 2 - 4px)}
+
+        div{
+            height: 100%;
+        }
+
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .container-info{
+        margin-top: 80px;
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    .container-localisation{
+        display: flex;
+        align-items: center;
+        margin-top: 80px;
+        margin-left: 40px;
+        margin-right: 40px;
+        width: 100%;
+
+        .text{
+            width: 40%;
+        }
+
+        p{
+            font-size: 14px;
+            font-family: montserrat-medium;
+            width: 50%;
+            line-height: 28px;
+            margin-top: 40px;
+        }
+    }
 }
