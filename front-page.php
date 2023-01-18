@@ -26,7 +26,7 @@
             <div class="text-info-gite">
                 <h3><?php echo($house['title']) ?><span><?php echo($house['name']) ?></span></h3>
                 <p><?php echo($house['text']) ?></p>
-                <a href="">DÉCOUVRIR</a>
+                <a href=""><?php echo($house['button'])?></a>
             </div>
         </div>
 <?php endforeach; ?>

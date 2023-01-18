@@ -50,41 +50,43 @@ header img {
   margin-left: 100px;
 }
 
-header nav {
+.menu-menu-principal-container {
   margin-right: 80px;
-  display: flex;
-  align-items: center;
 }
-header nav a {
+.menu-menu-principal-container .menu {
+  display: flex;
+}
+.menu-menu-principal-container .menu a:not(.sub-menu a) {
   text-decoration: none;
   color: white;
-  padding: 20px;
-  font-family: montserrat-medium;
-  font-size: 15px;
 }
-header nav .ul-nav {
-  display: flex;
+.menu-menu-principal-container .menu a:not(.sub-menu a):hover {
+  text-decoration: underline;
+  text-decoration-color: #9A4837;
+  text-underline-offset: 8px;
 }
-header nav .ul-nav li {
+.menu-menu-principal-container .menu li:not(.menu-item-106, .menu-item-107, .menu-item-108) {
   list-style: none;
-  color: white;
   padding: 20px;
   font-family: montserrat-medium;
   font-size: 15px;
+  list-style: none;
 }
-header nav .ul-nav .ul-gites {
-  position: absolute;
+.menu-menu-principal-container .menu .sub-menu {
   visibility: hidden;
+  position: absolute;
+  margin-top: 10px;
 }
-header nav .ul-nav .ul-gites li {
-  padding: 0;
-  padding-top: 5px;
+.menu-menu-principal-container .menu .sub-menu li {
+  list-style: none;
+  margin-bottom: 5px;
 }
-header nav .li-gites:hover {
-  color: red;
-}
-header nav .li-gites:hover ul {
+.menu-menu-principal-container .menu .menu-item-109:hover .sub-menu {
   visibility: visible;
+}
+.menu-menu-principal-container .menu .menu-item-109:hover .sub-menu a {
+  text-decoration: none;
+  color: white;
 }
 
 body {
@@ -558,6 +560,10 @@ body {
 }
 .container-contact .container-form {
   margin-bottom: 100px;
+}
+.container-contact .wpforms-fiel .wpforms-field-label {
+  font-family: montserrat-medium;
+  font-size: 20px;
 }
 .container-contact .container-info-contact {
   font-family: montserrat-medium;

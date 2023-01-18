@@ -57,49 +57,62 @@ header img{
     margin-left: 100px;
 }
 
-header nav{
+
+.menu-menu-principal-container{
+
     margin-right: calc(100px - 20px);
-    display: flex;
-    align-items: center;
 
-    a{
-        text-decoration: none;
-        color: white;
-        padding: 20px;
-        font-family: montserrat-medium;
-        font-size: 15px;
-    }
-
-    .ul-nav{
+    .menu{
         display: flex;
 
-        li{
-            list-style: none;
+        a:not(.sub-menu a){
+            text-decoration: none;
             color: white;
+
+            &:hover{
+                text-decoration: underline;
+                text-decoration-color: #9A4837;
+                text-underline-offset: 8px;
+            }
+        }
+
+        li:not(.menu-item-106 , .menu-item-107 , .menu-item-108){
+            list-style: none;
             padding: 20px;
             font-family: montserrat-medium;
             font-size: 15px;
+            list-style: none;
         }
 
-        .ul-gites{
-            position: absolute;
+        .sub-menu{
             visibility: hidden;
+            position: absolute;
+            margin-top: 10px;
 
             li{
-                padding: 0;
-                padding-top: 5px;
+                list-style: none;
+                margin-bottom: 5px;
+            }
+        }
+
+        .menu-item-109:hover{
+
+            .sub-menu{
+                visibility: visible;
+
+                a{
+                    text-decoration: none;
+                    color: white;
+                }
             }
         }
     }
-
-    .li-gites:hover {
-        color: red;
-
-        ul{
-            visibility: visible;
-        }
-    }
 }
+
+
+
+
+
 
 
 
