@@ -416,26 +416,26 @@ body {
   width: 100%;
   height: 350px;
 }
-.container-gite .container-img-gallery div:nth-child(1) {
+.container-gite .container-img-gallery .minia:nth-child(1) {
   grid-area: img1;
   height: 350px;
 }
-.container-gite .container-img-gallery div:nth-child(2) {
+.container-gite .container-img-gallery .minia:nth-child(2) {
   grid-area: img2;
   height: 350px;
 }
-.container-gite .container-img-gallery div:nth-child(3) {
+.container-gite .container-img-gallery .minia:nth-child(3) {
   grid-area: img3;
   height: 171px;
 }
-.container-gite .container-img-gallery div:nth-child(4) {
+.container-gite .container-img-gallery .minia:nth-child(4) {
   grid-area: img4;
   height: 171px;
 }
-.container-gite .container-img-gallery div {
+.container-gite .container-img-gallery div:not(.carousel) {
   height: 100%;
 }
-.container-gite .container-img-gallery img {
+.container-gite .container-img-gallery img:not(.carousel-cell img) {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -455,6 +455,7 @@ body {
   padding-right: 15px;
   border-radius: 5px;
   font-weight: 100;
+  cursor: pointer;
 }
 .container-gite .container-info {
   display: flex;
@@ -483,6 +484,23 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+.container-gite .picto-reserver .picto {
+  display: flex;
+  column-gap: 100px;
+}
+.container-gite .picto-reserver .picto ul li {
+  font-family: montserrat-medium;
+  font-size: 14px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.container-gite .picto-reserver .picto ul li img {
+  margin-right: 10px;
+  width: 30px;
+  height: 30px;
 }
 .container-gite .picto-reserver .reserver {
   display: flex;
@@ -515,6 +533,7 @@ body {
   margin-top: 80px;
   margin-left: 40px;
   margin-right: 40px;
+  padding-bottom: 100px;
   width: 100%;
 }
 .container-gite .container-localisation .text {
@@ -523,9 +542,28 @@ body {
 .container-gite .container-localisation p {
   font-size: 14px;
   font-family: montserrat-medium;
-  width: 50%;
+  width: 80%;
   line-height: 28px;
   margin-top: 40px;
+}
+.container-gite .carousel {
+  visibility: hidden;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vw;
+  height: 80vh;
+  z-index: 10000;
+}
+.container-gite .carousel-cell {
+  width: 100%;
+  height: 100%;
+}
+.container-gite .carousel-cell img {
+  width: 100%;
+  height: 80vh;
+  object-fit: cover;
 }
 
 .container-contact {
@@ -550,20 +588,112 @@ body {
   background-color: #9A4837;
 }
 .container-contact .container-form_info-contact_map {
+  margin-top: 40px;
   display: flex;
-  justify-content: space-between;
-  margin-top: 45px;
   width: 100%;
+  column-gap: 100px;
 }
 .container-contact .form_info-contact {
-  width: 50%;
+  width: 60%;
 }
 .container-contact .container-form {
   margin-bottom: 100px;
+  width: 100%;
 }
-.container-contact .wpforms-fiel .wpforms-field-label {
+.container-contact .wpforms-field-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "name textarea" "phone textarea" "mail textarea";
+}
+.container-contact #wpforms-99-field_0-container {
+  grid-area: name;
+  padding: 0;
+}
+.container-contact #wpforms-99-field_3-container {
+  grid-area: phone;
+  padding: 0;
+}
+.container-contact #wpforms-99-field_1-container {
+  grid-area: mail;
+  padding: 0;
+}
+.container-contact #wpforms-99-field_2-container {
+  grid-area: textarea;
+  padding: 0;
+}
+.container-contact #wpforms-99-field_1, .container-contact #wpforms-99-field_3, .container-contact #wpforms-99-field_0 {
+  background-color: transparent;
+  box-sizing: border-box;
+  border-radius: 2px;
+  color: #333;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  display: block;
+  float: none;
+  font-size: 16px;
   font-family: montserrat-medium;
-  font-size: 20px;
+  border: none;
+  border-bottom: 1px solid #9A4837;
+  padding: 0;
+  height: 38px;
+  width: max-content;
+  line-height: 1.3;
+}
+.container-contact ::placeholder {
+  font-family: montserrat-medium;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: #000000;
+}
+.container-contact .wpforms-field-label {
+  font-family: montserrat-medium;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: #000000;
+}
+.container-contact div.wpforms-container-full .wpforms-form textarea {
+  background-color: transparent;
+  box-sizing: border-box;
+  border-radius: 2px;
+  color: #333;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  display: block;
+  float: none;
+  font-size: 16px;
+  font-family: inherit;
+  border: 1px solid #9A4837;
+  padding: 6px 10px;
+  height: 100%;
+  width: 100%;
+  line-height: 1.3;
+  resize: none;
+}
+.container-contact div.wpforms-container-full .wpforms-form button[type=submit] {
+  font-family: montserrat-regular;
+  font-size: 14px;
+  text-decoration: none;
+  color: #E3DED6;
+  background-color: #9A4837;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 5px;
+  font-weight: 100;
+  border: none;
+  margin-top: 30px;
+}
+.container-contact div.wpforms-container-full .wpforms-form button[type=submit]:hover {
+  color: #E3DED6;
+  background-color: #9A4837;
+  border: none;
 }
 .container-contact .container-info-contact {
   font-family: montserrat-medium;

@@ -26,8 +26,10 @@
             <div class="text-info-gite">
                 <h3><?php echo($house['title']) ?><span><?php echo($house['name']) ?></span></h3>
                 <p><?php echo($house['text']) ?></p>
-                <a href=""><?php echo($house['button'])?></a>
+                <a href="<?php echo($house['button']['url']); ?>"><?php echo($house['button']['title']); ?></a>
             </div>
+            
+            
         </div>
 <?php endforeach; ?>
 </div>
@@ -63,6 +65,7 @@
         </div> -->
     </div>
     <div class="back-to-top"></div>
+    <script src="<?php echo(get_template_directory_uri()); ?>/assets/js/home.js"></script>
 </div>
 <?php
     // Footer
