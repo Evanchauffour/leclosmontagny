@@ -61,15 +61,47 @@ header nav{
     margin-right: calc(100px - 20px);
     display: flex;
     align-items: center;
+
+    a{
+        text-decoration: none;
+        color: white;
+        padding: 20px;
+        font-family: montserrat-medium;
+        font-size: 15px;
+    }
+
+    .ul-nav{
+        display: flex;
+
+        li{
+            list-style: none;
+            color: white;
+            padding: 20px;
+            font-family: montserrat-medium;
+            font-size: 15px;
+        }
+
+        .ul-gites{
+            position: absolute;
+            visibility: hidden;
+
+            li{
+                padding: 0;
+                padding-top: 5px;
+            }
+        }
+    }
+
+    .li-gites:hover {
+        color: red;
+
+        ul{
+            visibility: visible;
+        }
+    }
 }
 
-header nav a{
-    text-decoration: none;
-    color: white;
-    padding: 20px;
-    font-family: montserrat-medium;
-    font-size: 15px;
-}
+
 
 
 
