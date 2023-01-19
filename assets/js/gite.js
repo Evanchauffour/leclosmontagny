@@ -1,13 +1,20 @@
 const button = document.querySelector('.more-picture')
-const carousel = document.querySelector('.carousel')
+const containerCarousel = document.querySelector('.container-carousel')
 const carouselCells = document.querySelector('.flickity-viewport')
 const body = document.querySelector('body')
 const containerGite = document.querySelector('.container-gite')
+const close = document.querySelector('.close')
 
 button.addEventListener('click', () =>{
-    carousel.style.visibility = "visible"
+    containerCarousel.style.visibility = "visible"
     body.style.overflow = "hidden"
     body.classList.add('active')
+})
+
+close.addEventListener('click', () =>{
+    containerCarousel.style.visibility = "hidden"
+    body.style.overflow = "scroll"
+    body.classList.remove('active')
 })
 
 
