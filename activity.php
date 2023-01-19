@@ -13,7 +13,7 @@
 
 <div class="grid">
 <?php 
-    foreach($activities as $activity):
+    foreach(array_merge($activities, $activities, $activities) as $activity):
 ?>
     <div class="grid-item">
         <img src="<?php echo($activity['image']['url']) ?>" alt="">
@@ -24,5 +24,7 @@
     </div>
 <?php endforeach; ?>
 </div>
-    <script src="<?php echo(get_template_directory_uri()); ?>/assets/js/activity.js"></script>
 </div>
+
+<?php 
+get_footer();

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js">
-    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+
 </script>
     <title>Le CLos Montagny</title>
     <?php wp_head();?>
