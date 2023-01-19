@@ -1,5 +1,5 @@
 const button = document.querySelector('.more-picture')
-const containerCarousel = document.querySelector('.container-carousel')
+const containerCarousel = document.querySelector('.container-carousel-background')
 const carouselCells = document.querySelector('.flickity-viewport')
 const body = document.querySelector('body')
 const containerGite = document.querySelector('.container-gite')

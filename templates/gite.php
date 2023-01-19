@@ -29,13 +29,15 @@
         ?>
     
     </div>
-    <div class="container-carousel">
-        <div class="carousel">
-            <?php for($i = 0; $i <= $count_img -1; $i++): ?>
-                <div class="carousel-cell"><img src="<?php echo($images[$i]['url']); ?>" alt=""></div>
-            <?php endfor; ?>
-        </div> 
-        <div class="close"><img src="<?php echo(get_template_directory_uri()); ?>/assets/img/close.svg" alt=""></div>
+    <div class="container-carousel-background">
+        <div class="container-carousel">
+            <div class="carousel">
+                <?php for($i = 0; $i <= $count_img -1; $i++): ?>
+                    <div class="carousel-cell"><img src="<?php echo($images[$i]['url']); ?>" alt=""></div>
+                <?php endfor; ?>
+            </div> 
+            <div class="close"><img src="<?php echo(get_template_directory_uri()); ?>/assets/img/close.svg" alt=""></div>
+        </div>
     </div>
     <div class="container-info">
         <div class="text-info">

@@ -547,39 +547,51 @@ body {
   line-height: 28px;
   margin-top: 40px;
 }
-.container-gite .container-carousel {
+.container-gite .container-carousel-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
   visibility: hidden;
-  width: 80vw;
-  height: 80vh;
+  z-index: 10000;
+}
+.container-gite .container-carousel-background .container-carousel {
+  width: 80%;
+  height: 80%;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 10000;
 }
-.container-gite .container-carousel .carousel {
+.container-gite .container-carousel-background .container-carousel .carousel {
   width: 100%;
   height: 100%;
 }
-.container-gite .container-carousel .carousel-cell {
+.container-gite .container-carousel-background .container-carousel .carousel-cell {
   width: 100%;
   height: 100%;
 }
-.container-gite .container-carousel .carousel-cell img {
+.container-gite .container-carousel-background .container-carousel .carousel-cell img {
   width: 100%;
   height: 80vh;
   object-fit: cover;
 }
-.container-gite .container-carousel .close {
+.container-gite .container-carousel-background .container-carousel .close {
   position: absolute;
   right: 10px;
   top: 10px;
   z-index: 10000;
-}
-.container-gite .container-carousel .close img {
+  background-color: white;
+  border-radius: 50%;
   width: 50px;
   height: 50px;
   cursor: pointer;
+}
+.container-gite .container-carousel-background .container-carousel .close img {
+  width: 100%;
+  height: 100%;
 }
 
 .container-activity {
