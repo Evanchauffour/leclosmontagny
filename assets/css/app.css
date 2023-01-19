@@ -228,14 +228,15 @@ body {
   text-decoration: none;
   color: black;
   display: inline;
+  width: min-content;
 }
 .text-info-gite a::after {
   content: "";
   position: absolute;
-  left: -10%;
+  left: 0;
   background-image: url(../img/pink-bg.svg);
   background-size: cover;
-  width: 50%;
+  width: 100%;
   height: 100%;
 }
 
@@ -579,6 +580,108 @@ body {
   width: 50px;
   height: 50px;
   cursor: pointer;
+}
+
+.container-activity {
+  margin-top: 130px;
+  margin-left: 10px;
+  margin-right: 10px;
+  /* ---- grid ---- */
+  /* clearfix */
+  /* ---- grid-item ---- */
+}
+.container-activity h1 {
+  display: inline;
+  position: relative;
+  font-family: montserrat-semibold;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+.container-activity h1::after {
+  content: "";
+  position: absolute;
+  left: -30px;
+  top: 110%;
+  width: 100%;
+  height: 2px;
+  background-color: #9A4837;
+}
+.container-activity .grid {
+  width: 100%;
+  margin-top: 100px;
+}
+.container-activity .grid:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.container-activity .grid-item {
+  position: relative;
+  box-sizing: border-box;
+  width: calc(33.3333333333% - 20px);
+  height: 300px;
+  float: left;
+  border: 2px solid #333;
+  border-color: hsla(0deg, 0%, 0%, 0.5);
+  border-radius: 5px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  overflow: hidden;
+}
+.container-activity .grid-item:hover img {
+  transform: scale(1.2);
+}
+.container-activity .grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.5s ease;
+}
+.container-activity .grid-item .text {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  font-family: montserrat-semibold;
+  transition: all 0.5s ease;
+}
+.container-activity .grid-item .text h2 {
+  text-transform: uppercase;
+  font-size: 20px;
+  margin-bottom: 10px;
+  transition: all 0.5s 0.5s ease;
+}
+.container-activity .grid-item .text p {
+  font-size: 14px;
+  visibility: hidden;
+  transition: all 0.5s ease;
+}
+.container-activity .grid-item:hover p {
+  visibility: visible;
+}
+.container-activity .grid-item:hover .text {
+  top: 50%;
+}
+.container-activity .grid-item--width2 {
+  width: calc(33.3333333333% - 20px);
+}
+.container-activity .grid-item--width3 {
+  width: calc(33.3333333333% - 20px);
+}
+.container-activity .grid-item--width4 {
+  width: calc(33.3333333333% - 20px);
+}
+.container-activity .grid-item--height2 {
+  height: 250px;
+}
+.container-activity .grid-item--height3 {
+  height: 300px;
+}
+.container-activity .grid-item--height4 {
+  height: 350px;
 }
 
 .container-contact {
