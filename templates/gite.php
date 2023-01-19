@@ -11,12 +11,16 @@
     //Options
 
     $options = get_field('options');
+    
+    // Nombre images
+
+    $count_img = count($images);
 ?>
 
 <div class="container-gite">
     <h1><?php the_field('title');?><span><?php the_field('name'); ?></span></h1>
     <div class="container-img-gallery"> 
-        <?php for($i = 0; $i <=3; $i++): ?>
+        <?php for($i = 0; $i <= 3; $i++): ?>
         <div class='minia'><img src="<?php echo($images[$i]['url']); ?>" alt=""></div>
         <?php endfor; ?>
         <?php if(count($images) > 4){
@@ -26,7 +30,7 @@
     
     </div>
         <div class="carousel">
-            <?php for($i = 0; $i <=3; $i++): ?>
+            <?php for($i = 0; $i <= $count_img -1; $i++): ?>
                 <div class="carousel-cell"><img src="<?php echo($images[$i]['url']); ?>" alt=""></div>
             <?php endfor; ?>
         </div> 
