@@ -4,11 +4,14 @@
     margin-right: 10px;
 
     h1{
-        display: inline;
         position: relative;
+        left: 50%;
+        transform: translate(-50%);
         font-family: montserrat-semibold;
         font-size: 24px;
         text-transform: uppercase;
+        text-align: center;
+        display: inline-block;
     }
 
     h1::after{
@@ -41,12 +44,10 @@
 .grid-item {
   position: relative;
   box-sizing: border-box;
-  max-width: calc(33.3333% - 16px);
+  width: calc(33.3333% - 16px);
   float: left;
-  border: 2px solid #333;
   border-color: hsla(0, 0%, 0%, 0.5);
   margin-bottom: 15px;
-
   overflow: hidden;
   font-size: 0;
 

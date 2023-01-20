@@ -13,7 +13,7 @@
 
 <div class="grid">
 <?php 
-    foreach(array_merge($activities, $activities, $activities) as $activity):
+    foreach($activities as $activity):
 ?>
     <div class="grid-item">
         <img src="<?php echo($activity['image']['url']) ?>" alt="">

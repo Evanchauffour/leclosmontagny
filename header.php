@@ -11,30 +11,20 @@
     <title>Le CLos Montagny</title>
     <?php wp_head();?>
 </head>
-<body>
+<body <?php body_class(); ?>>
 <header>
-        <a href=""><img src="<?php echo(get_template_directory_uri()); ?>/assets/img/logo.svg" alt="logo"></a>
-    <!-- <nav>
-        <ul class="ul-nav">
-            <li><a href="">Accueil</a></li>
-            <li class="li-gites">Nos gîtes
-                <ul class="ul-gites">
-                    <li>La maison de florence<a href=""></a></li>
-                    <li>Le pavillon du nivolet<a href=""></a></li>
-                    <li>Le pavillon du granier<a href=""></a></li>
-                </ul>
-            </li>
-            <li><a href="">Activités</a></li>
-            <li><a href="">Ateliers</a></li>
-            <li><a href="Contact">Contact</a></li>
-        </ul>
-    </nav> -->
-    <?php
+        <a href="<?php echo get_home_url();?>"><img src="<?php echo(get_template_directory_uri()); ?>/assets/img/logo.svg" alt="logo"></a>
+        <div class="burger">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </div>
+<div class="container-header-responsive">
+<?php
         wp_nav_menu(array(
             'menu' => 'main_menu'
         ));
     ?>
-
+</div>
 
 </header>
-<br>
