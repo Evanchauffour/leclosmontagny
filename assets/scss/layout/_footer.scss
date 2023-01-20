@@ -23,3 +23,31 @@ footer{
         padding: 10px;
     }
 }
+
+@media screen and (max-width:600px) {
+    footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 100vw;
+        height: auto;
+        background-color: #9A4837;
+        color: white;
+        font-family: montserrat-medium;
+    
+        img{
+            position: relative;
+            top: inherit;
+            left: inherit;
+            transform: translateY(0);
+        }
+    
+        a{
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+        }
+    }
+}

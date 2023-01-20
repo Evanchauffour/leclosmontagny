@@ -469,6 +469,7 @@ body{
 
     .container-about_us{
         margin: 0 20px;
+        width: auto;
     }
     
     .container-video-about_us{
@@ -514,7 +515,7 @@ body{
     }
     
     .container-video-about_us img{
-        width: 90%;
+        width: 100%;
         height: 400px;
     }
 
@@ -585,7 +586,9 @@ body{
 
     .home-description{
         font-size: 18px;
-        margin: 100px 20px;
+        margin: 100px 5px;
+        margin-left: -20px;
+        width: 100%;
     }
 
     .text-info-video-about_us{

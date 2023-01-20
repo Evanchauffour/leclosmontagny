@@ -672,6 +672,7 @@ body {
   }
   .container-about_us {
     margin: 0 20px;
+    width: auto;
   }
   .container-video-about_us {
     display: flex;
@@ -710,7 +711,7 @@ body {
     margin-bottom: 50px;
   }
   .container-video-about_us img {
-    width: 90%;
+    width: 100%;
     height: 400px;
   }
   .container-video-about_us img {
@@ -767,7 +768,9 @@ body {
 @media screen and (max-width: 500px) {
   .home-description {
     font-size: 18px;
-    margin: 100px 20px;
+    margin: 100px 5px;
+    margin-left: -20px;
+    width: 100%;
   }
   .text-info-video-about_us h3 {
     position: relative;
@@ -1351,6 +1354,32 @@ footer a {
   text-decoration: none;
   color: white;
   padding: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100vw;
+    height: auto;
+    background-color: #9A4837;
+    color: white;
+    font-family: montserrat-medium;
+  }
+  footer img {
+    position: relative;
+    top: inherit;
+    left: inherit;
+    transform: translateY(0);
+  }
+  footer a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+  }
 }
 
 /*# sourceMappingURL=app.css.map */
