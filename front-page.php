@@ -11,10 +11,9 @@
 
 <div class="home">
     <div class="discover">
-        <h1>Un lieu, du lien...</h1>
-        <button><a href="okpiojip">RESERVER</a></button>
     </div>
 </div>
+<h1 class="home-description"><?php the_field('home_title') ?></h1>
 <div class="container-infos-gites">
 <?php 
     foreach($houses as $house):
@@ -34,7 +33,7 @@
 <?php endforeach; ?>
 </div>
 <div class="container-about_us">
-    <h1 class="title-home">En <span>famille</span>, entre <span>amis</span> ou pour un événement <span>professionnel</span>, nous vous donnons le fil pour créer du <span>lien</span>...</h1>
+    <h2 class="title-home">En <span>famille</span>, entre <span>amis</span> ou pour un événement <span>professionnel</span>, nous vous donnons le fil pour créer du <span>lien</span>...</h2>
     <div class="container-video-about_us">
         <div class="text-info-video-about_us">
             <h3>DÉCOUVREZ <br>UN<span>Charme</span></h3>

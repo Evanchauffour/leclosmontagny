@@ -1,5 +1,7 @@
-$('#grid-item').imagesLoaded( function() {
-    (function() {
+(function ($) {
+    
+    $('.grid').imagesLoaded( function() {
+        console.log('-->')
     
         var elem = document.querySelector('.grid');
         
@@ -21,7 +23,7 @@ $('#grid-item').imagesLoaded( function() {
         //   for an individual element
         //var msnry = new Masonry( '.grid', {
         // options
-       // });
-    })()
+       // })),;
   });
+})(jQuery)
 

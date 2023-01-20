@@ -121,7 +121,7 @@ header img {
     top: 0;
     right: 0;
     margin: 0;
-    width: 50vw;
+    width: 70vw;
     height: 100vh;
     background-color: #9A4837;
     transform: translateX(100%);
@@ -136,6 +136,18 @@ header img {
     right: 40px;
     width: 100%;
     margin-top: 100px;
+  }
+  .menu-menu-principal-container .menu a:not(.sub-menu a) {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+  }
+  .home .menu-menu-principal-container .menu a:not(.sub-menu a) {
+    color: white;
+  }
+  .menu-menu-principal-container .menu a:not(.sub-menu a):hover {
+    text-decoration: underline;
+    text-decoration-color: #9A4837;
+    text-underline-offset: 8px;
   }
   .menu-menu-principal-container .menu .menu-item-109::before {
     content: "";
@@ -171,7 +183,7 @@ header img {
   }
   .menu-menu-principal-container .menu .menu-item-109:hover .sub-menu a {
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
   }
   .home .menu-menu-principal-container .menu .menu-item-109:hover .sub-menu a {
     color: white;
@@ -179,7 +191,7 @@ header img {
   .burger {
     display: block;
     width: 50px;
-    margin-right: 50px;
+    margin-right: 30px;
     z-index: 10000;
   }
   .burger span {
@@ -244,6 +256,15 @@ body {
   background-position: center;
   margin-bottom: 8vh;
   background-repeat: no-repeat;
+}
+
+.home-description {
+  font-family: montserrat-regular;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: left;
+  margin: 100px 50px;
 }
 
 .discover {
@@ -491,7 +512,7 @@ body {
 .citation p {
   font-family: montserrat-medium;
   font-size: 16px;
-  width: 40%;
+  width: 50%;
   line-height: 28px;
 }
 
@@ -834,7 +855,8 @@ body {
 }
 
 .container-contact {
-  margin-top: 130px;
+  height: 70vh;
+  margin-top: 20vh;
   margin-left: 100px;
   margin-right: 100px;
 }
@@ -981,6 +1003,44 @@ body {
 .container-contact .map iframe {
   width: 100%;
   height: 90%;
+}
+
+.mentions {
+  margin-top: 15vh;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 150px;
+}
+.mentions b {
+  font-family: montserrat-semibold;
+}
+.mentions p, .mentions a {
+  font-family: montserrat-regular;
+  line-height: 28px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100vw;
+  height: 10vh;
+  background-color: #9A4837;
+  color: white;
+  font-family: montserrat-medium;
+}
+footer img {
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  transform: translateY(-50%);
+}
+footer a {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
 }
 
 /*# sourceMappingURL=app.css.map */

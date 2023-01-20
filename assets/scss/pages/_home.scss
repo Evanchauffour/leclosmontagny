@@ -17,6 +17,15 @@ body{
     background-repeat: no-repeat;
 }
 
+.home-description{
+    font-family: montserrat-regular;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: left;
+    margin: 100px 50px;
+}
+
 .discover{
     display: flex;
     flex-direction: column;
@@ -277,7 +286,7 @@ body{
     p{
         font-family: montserrat-medium;
         font-size: 16px;
-        width: 40%;
+        width: 50%;
         line-height: 28px;
     }
 
