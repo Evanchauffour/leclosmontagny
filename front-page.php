@@ -39,7 +39,7 @@
             <h3>DÉCOUVREZ <br>LE<span>Clos Montagny</span></h3>
             <p><?php the_field('description') ?></p>
         </div>
-        <img src="http://127.0.0.1/leclosmontagny/wp-content/themes/leclosmontagny/assets/img/bghome.jpg" alt="">
+        <img src="<?php echo(get_template_directory_uri()); ?>/assets/img/bghome.jpg" alt="">
     </div>
     <div class="container-citation">
 <?php 
