@@ -36,7 +36,7 @@
     <h2 class="title-home">En <span>famille</span>, entre <span>amis</span> ou pour un événement <span>professionnel</span>, nous vous donnons le fil pour créer du <span>lien</span>...</h2>
     <div class="container-video-about_us">
         <div class="text-info-video-about_us">
-            <h3>DÉCOUVREZ <br>UN<span>Charme</span></h3>
+            <h3>DÉCOUVREZ <br>LE<span>Clos Montagny</span></h3>
             <p><?php the_field('description') ?></p>
         </div>
         <img src="http://127.0.0.1/leclosmontagny/wp-content/themes/leclosmontagny/assets/img/bghome.jpg" alt="">
