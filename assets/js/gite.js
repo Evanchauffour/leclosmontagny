@@ -17,6 +17,15 @@ close.addEventListener('click', () =>{
     body.classList.remove('active')
 })
 
+containerCarousel.addEventListener('click', (evt) =>{
+    if(evt.target.isSameNode(containerCarousel)){
+        containerCarousel.style.visibility = "hidden"
+        body.style.overflow = "scroll"
+        body.classList.remove('active')
+        console.log(evt.target);
+    }
+})
+
 
 
 var flkty = new Flickity( '.carousel', {

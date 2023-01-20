@@ -40,7 +40,7 @@
             <h3>DÉCOUVREZ <br>UN<span>Charme</span></h3>
             <p><?php the_field('description') ?></p>
         </div>
-        <img src="http://127.0.0.1/leclosmontagny/wp-content/themes/leclosmontagny/assets/img/video-aboutus.png" alt="">
+        <img src="http://127.0.0.1/leclosmontagny/wp-content/themes/leclosmontagny/assets/img/bghome.jpg" alt="">
     </div>
     <div class="container-citation">
 <?php 
