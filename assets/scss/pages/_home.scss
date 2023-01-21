@@ -585,10 +585,56 @@ body{
 @media screen and (max-width: 500px) {
 
     .home-description{
-        font-size: 18px;
+        font-size: 15px;
         margin: 100px 5px;
         margin-left: 20px;
         width: 80%;
+    }
+
+    .text-info-gite{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+        margin-left: 0;
+
+        h3:not(span){
+            position: relative;
+            color: #9A4837;
+            font-family: montserrat-medium;
+            font-size: 16px;
+            line-height: 50px;
+            text-transform: uppercase;
+            margin-bottom: 80px;
+
+            
+        }
+    
+        span{
+            position: absolute;
+            top: 90%;
+            left: 40px;
+            transform: translateY(-50%);
+            color: black;
+            font-size: 60px;
+            font-family: rouge;
+            font-weight: 100;
+            text-transform: capitalize;
+
+           
+        }
+    
+        p{
+            font-size: 11px;
+            line-height: 28px;
+            width: 85%;
+            margin-bottom: 30px;
+        }
+    }
+
+    .title-home{
+        font-size: 30px;
     }
 
     .text-info-video-about_us{
@@ -597,16 +643,24 @@ body{
         position: relative;
         color: #9A4837;
         font-family: montserrat-medium;
-        font-size: 22px;
+        font-size: 15px;
         line-height: 50px; 
         margin-bottom: 130px;   
+
+        br{
+            line-height: 0;
+        }
     }
 
     span{
         position: absolute;
         top: 100%;
         left: 50px;
-        font-size: 70px;
+        font-size: 60px;
+    }
+
+    p{
+        font-size: 11px;
     }
 }
 
@@ -669,7 +723,7 @@ body{
     
         p{
             font-family: montserrat-medium;
-            font-size: 16px;
+            font-size: 11px;
             width: 90%;
             line-height: 28px;
         }

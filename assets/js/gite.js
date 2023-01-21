@@ -27,11 +27,48 @@ containerCarousel.addEventListener('click', (evt) =>{
 })
 
 
+    // Carousel
 
 var flkty = new Flickity( '.carousel', {
     // options
-  });
+});
 
-  var flkty = new Flickity( '.carousel-responsive', {
+
+//   Carousel responsive
+
+var flkty = new Flickity( '.carousel-responsive', {
     // options
-  });
+});
+
+
+
+//   Menu responsive
+
+
+const items = document.querySelectorAll('.items');
+const tab = document.querySelectorAll('.tab');
+index = 0;
+  
+items.forEach(item =>{
+  
+    item.addEventListener('click', (e) =>{
+        index = e.target.getAttribute('data-tab');
+        console.log(index)
+        for(i = 0; i < tab.length; i++){
+            if(tab[i].getAttribute('data-tab') == index){
+                  tab[i].style.display = "flex"
+            }else{
+                tab[i].style.display = "none"
+
+            }
+        }
+        for(j = 0; j < items.length; j++){
+            if(items[j].getAttribute('data-tab') != index){
+                  items[j].classList.remove('active')
+            }else{
+                items[j].classList.add('active')
+
+            }
+        }
+    })
+})

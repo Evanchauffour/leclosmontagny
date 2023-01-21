@@ -49,17 +49,17 @@
         </div> 
     </div>
     <div class="menu-responsive">
-        <p>Description</p>
-        <p>Description technique</p>
-        <p>Localisation</p>
+        <p class="items active" data-tab="1">Description</p>
+        <p class="items" data-tab="2">Description technique</p>
+        <p class="items" data-tab="3">Localisation</p>
     </div>
     <div class="container-info">
-        <div class="text-info">
+        <div class="text-info tab" data-tab="1">
             <h2><?php the_field('title_info'); ?></h2>
             <div class="list"><?php the_field('info_logistic') ?></div>
         </div>
         <div class="picto-reserver">
-            <div class="picto">
+            <div class="picto tab" data-tab="2">
             <ul>
                 <li><img src="<?php echo(get_template_directory_uri()); ?>/assets/img/bedroom.svg" alt=""><?php echo($options['rooms']); ?> Chambres</li>
                 <li><img src="<?php echo(get_template_directory_uri()); ?>/assets/img/kitchen.svg" alt=""><?php echo($options['kitchen']); ?> Cuisines</li>
@@ -78,12 +78,12 @@
                 <div class="button">
                     <a href="">Sur AirBnb</a>
                     <a href="">Sur Gîtes de France</a>
-                    <a href="">Nous contacter </a>
+                    <a href="contact">Nous contacter </a>
                 </div>
             </div>
         </div>
     </div>
-    <div class="container-localisation">
+    <div class="container-localisation tab" data-tab="3">
         <div class="text">
             <h2><?php the_field('title_location'); ?></h2> 
             <p><?php the_field('text_location'); ?></p> 

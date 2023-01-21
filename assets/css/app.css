@@ -109,7 +109,7 @@ header img {
   }
   .container-header-responsive {
     visibility: hidden;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
@@ -768,24 +768,67 @@ body {
 }
 @media screen and (max-width: 500px) {
   .home-description {
-    font-size: 18px;
+    font-size: 15px;
     margin: 100px 5px;
     margin-left: 20px;
     width: 80%;
+  }
+  .text-info-gite {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    margin-left: 0;
+  }
+  .text-info-gite h3:not(span) {
+    position: relative;
+    color: #9A4837;
+    font-family: montserrat-medium;
+    font-size: 16px;
+    line-height: 50px;
+    text-transform: uppercase;
+    margin-bottom: 80px;
+  }
+  .text-info-gite span {
+    position: absolute;
+    top: 90%;
+    left: 40px;
+    transform: translateY(-50%);
+    color: black;
+    font-size: 60px;
+    font-family: rouge;
+    font-weight: 100;
+    text-transform: capitalize;
+  }
+  .text-info-gite p {
+    font-size: 11px;
+    line-height: 28px;
+    width: 85%;
+    margin-bottom: 30px;
+  }
+  .title-home {
+    font-size: 30px;
   }
   .text-info-video-about_us h3 {
     position: relative;
     color: #9A4837;
     font-family: montserrat-medium;
-    font-size: 22px;
+    font-size: 15px;
     line-height: 50px;
     margin-bottom: 130px;
+  }
+  .text-info-video-about_us h3 br {
+    line-height: 0;
   }
   .text-info-video-about_us span {
     position: absolute;
     top: 100%;
     left: 50px;
-    font-size: 70px;
+    font-size: 60px;
+  }
+  .text-info-video-about_us p {
+    font-size: 11px;
   }
   .container-video-about_us img {
     width: 100%;
@@ -837,7 +880,7 @@ body {
   }
   .citation p {
     font-family: montserrat-medium;
-    font-size: 16px;
+    font-size: 11px;
     width: 90%;
     line-height: 28px;
   }
@@ -1083,6 +1126,9 @@ body {
 .container-gite .container-carousel-responsive {
   display: none;
 }
+.container-gite .menu-responsive {
+  display: none;
+}
 
 @media screen and (max-width: 1300px) {
   .container-info {
@@ -1139,9 +1185,16 @@ body {
     object-fit: cover;
   }
   .container-gite .menu-responsive {
+    display: block;
     margin-top: 120px;
     display: flex;
     justify-content: space-around;
+    margin-bottom: 60px;
+  }
+  .container-gite .menu-responsive .items.active {
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    text-decoration-color: #9A4837;
   }
   .container-gite .menu-responsive p {
     font-family: montserrat-semibold;
@@ -1157,9 +1210,9 @@ body {
     margin-right: 20px;
   }
   .container-gite .text-info {
-    margin-top: 80px;
+    margin-top: 0;
     margin-bottom: 60px;
-    display: none;
+    display: block;
     width: 100%;
   }
   .container-gite .text-info .list {
@@ -1177,11 +1230,13 @@ body {
     margin-bottom: 5px;
   }
   .container-gite .picto-reserver {
-    display: none;
+    display: block;
   }
   .container-gite .picto-reserver .picto {
-    margin-top: 80px;
+    display: none;
+    margin-top: 0;
     justify-content: center;
+    margin-bottom: 100px;
   }
   .container-gite .picto-reserver .picto ul li {
     font-size: 11px;
@@ -1191,14 +1246,18 @@ body {
     height: 20px;
   }
   .container-gite .picto-reserver .reserver {
-    display: none;
+    display: block;
+    width: 100%;
+  }
+  .container-gite .picto-reserver .reserver h3 {
+    font-size: 20px;
   }
   .container-gite .container-localisation {
-    display: block;
+    display: none;
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
-    margin-top: 80px;
+    margin-top: 0;
     padding-bottom: 100px;
     text-align: center;
     width: 80%;
@@ -1533,6 +1592,37 @@ body {
     margin-left: 20px;
     margin-right: 20px;
   }
+  .container-contact h1 {
+    display: inline;
+    position: relative;
+    font-family: montserrat-semibold;
+    font-size: 15px;
+    margin-left: 30px;
+  }
+  .container-contact #wpforms-99-field_1, .container-contact #wpforms-99-field_3, .container-contact #wpforms-99-field_0 {
+    font-size: 11px;
+    font-family: montserrat-medium;
+  }
+  .container-contact ::placeholder {
+    font-family: montserrat-medium;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 24px;
+    color: #000000;
+  }
+  .container-contact div.wpforms-container-full .wpforms-form .wpforms-field-label {
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 24px;
+  }
+  .container-contact div.wpforms-container-full .wpforms-form textarea {
+    font-size: 11px;
+    font-family: montserrat-regular;
+  }
+  .container-contact div.wpforms-container-full .wpforms-form button[type=submit] {
+    font-size: 11px;
+  }
   .container-contact .container-form_info-contact_map {
     margin-top: 40px;
     display: flex;
@@ -1546,7 +1636,7 @@ body {
   }
   .container-contact .container-info-contact {
     font-family: montserrat-medium;
-    font-size: 15px;
+    font-size: 11px;
     margin-bottom: 80px;
   }
   .container-contact .container-info-contact div {

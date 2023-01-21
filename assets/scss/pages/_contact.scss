@@ -186,6 +186,43 @@
         margin-left: 20px;
         margin-right: 20px;
 
+        h1{
+            display: inline;
+            position: relative;
+            font-family: montserrat-semibold;
+            font-size: 15px;
+            margin-left: 30px;
+        }
+
+        #wpforms-99-field_1 , #wpforms-99-field_3 , #wpforms-99-field_0{
+            font-size: 11px;
+            font-family: montserrat-medium;
+        }
+
+        ::placeholder{
+            font-family: montserrat-medium;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 11px;
+            line-height: 24px;
+            color: #000000;
+        }
+
+        div.wpforms-container-full .wpforms-form .wpforms-field-label{
+            font-weight: 400;
+            font-size: 11px;
+            line-height: 24px;
+        }
+    
+        div.wpforms-container-full .wpforms-form textarea {
+            font-size: 11px;
+            font-family: montserrat-regular;
+        }
+
+        div.wpforms-container-full .wpforms-form button[type=submit]{
+            font-size: 11px;
+        }
+
         .container-form_info-contact_map{
             margin-top: 40px;
             display: flex;
@@ -201,7 +238,7 @@
 
         .container-info-contact{
             font-family: montserrat-medium;
-            font-size: 15px;
+            font-size: 11px;
             margin-bottom: 80px;
     
             div{
@@ -225,6 +262,8 @@
             }
         }
     }
+
+
 
 
 }
