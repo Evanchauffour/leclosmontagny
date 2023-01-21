@@ -15,6 +15,9 @@
     // Nombre images
 
     $count_img = count($images);
+
+    // Links
+    $links = get_field('links');
 ?>
 
 <div class="container-gite">
@@ -23,7 +26,7 @@
         <?php for($i = 0; $i <= 3; $i++): ?>
         <div class='minia'><img src="<?php echo($images[$i]['url']); ?>" alt=""></div>
         <?php endfor; ?>
-        <?php if(count($images) > 4){
+        <?php if(count($images) > 3){
             echo('<button class="more-picture">Afficher les photos</button>');
         }
         ?>
@@ -76,9 +79,12 @@
             <div class="reserver">
             <h3>Réserver</h3>
                 <div class="button">
-                    <a href="">Sur AirBnb</a>
-                    <a href="">Sur Gîtes de France</a>
-                    <a href="contact">Nous contacter </a>
+                <?php 
+                    foreach($links as $link): 
+                    $link = $link['link'];
+                ?>
+                    <a href="<?php echo($link['url']) ?>"><?php echo($link['title']) ?></a>
+                <?php endforeach ; ?>
                 </div>
             </div>
         </div>

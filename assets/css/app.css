@@ -816,7 +816,7 @@ body {
     font-family: montserrat-medium;
     font-size: 15px;
     line-height: 50px;
-    margin-bottom: 130px;
+    margin-bottom: 80px;
   }
   .text-info-video-about_us h3 br {
     line-height: 0;
@@ -933,6 +933,11 @@ body {
   margin-top: 100px;
   width: 100%;
   height: 350px;
+}
+.container-gite .container-img-gallery .minia {
+  width: 100%;
+  object-fit: cover;
+  overflow: hidden;
 }
 .container-gite .container-img-gallery .minia:nth-child(1) {
   grid-area: img1;
@@ -1147,13 +1152,20 @@ body {
   .container-gite {
     width: 100vw;
     margin: 0 0;
-    margin-top: 100px;
+    margin-top: 150px;
   }
   .container-gite h1:not(span) {
     font-size: 20px;
+    line-height: 30px;
+  }
+  .container-gite h1 {
+    display: inline-block;
+    left: 50%;
+    transform: translate(-70%);
   }
   .container-gite span {
     font-size: 70px;
+    left: 40px;
   }
   .container-gite h2 {
     position: relative;
@@ -1181,7 +1193,7 @@ body {
   }
   .container-gite .container-carousel-responsive .carousel-cell img {
     width: 100%;
-    height: 80vh;
+    height: 100%;
     object-fit: cover;
   }
   .container-gite .menu-responsive {
@@ -1681,6 +1693,7 @@ footer {
   background-color: #9A4837;
   color: white;
   font-family: montserrat-medium;
+  padding: 10px;
 }
 footer img {
   position: absolute;
@@ -1694,7 +1707,7 @@ footer a {
   padding: 10px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   footer {
     display: flex;
     flex-direction: column;
