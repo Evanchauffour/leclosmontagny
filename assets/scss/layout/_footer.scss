@@ -32,7 +32,7 @@ footer{
         justify-content: center;
         position: relative;
         width: 100vw;
-        height: auto;
+        height: 20vh;
         background-color: #9A4837;
         color: white;
         font-family: montserrat-medium;
@@ -42,12 +42,20 @@ footer{
             top: inherit;
             left: inherit;
             transform: translateY(0);
+            width: 80%;
+            margin: 0 auto;
         }
     
         a{
+            display: flex;
             text-decoration: none;
             color: white;
             padding: 10px;
+            font-size: 11px ;
+        }
+
+        p{
+            font-size: 11px;
         }
     }
 }

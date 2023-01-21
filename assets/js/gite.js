@@ -31,3 +31,7 @@ containerCarousel.addEventListener('click', (evt) =>{
 var flkty = new Flickity( '.carousel', {
     // options
   });
+
+  var flkty = new Flickity( '.carousel-responsive', {
+    // options
+  });

@@ -61,6 +61,7 @@
     max-width: 100%;
     height: auto;
     transition: all 0.5s ease;
+    object-fit: cover;
   }
 
   .text{
@@ -136,6 +137,10 @@
     margin-bottom: 15px;
     overflow: hidden;
     font-size: 0;
+
+    .text{
+      width: 90%;
+    }
   }
 
   .grid-item--width2 { width: calc(100%); }

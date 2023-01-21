@@ -39,6 +39,20 @@
             <div class="close"><img src="<?php echo(get_template_directory_uri()); ?>/assets/img/close.svg" alt=""></div>
         </div>
     </div>
+
+
+    <div class="container-carousel-responsive">
+        <div class="carousel-responsive">
+            <?php for($i = 0; $i <= $count_img -1; $i++): ?>
+                <div class="carousel-cell"><img src="<?php echo($images[$i]['url']); ?>" alt=""></div>
+            <?php endfor; ?>
+        </div> 
+    </div>
+    <div class="menu-responsive">
+        <p>Description</p>
+        <p>Description technique</p>
+        <p>Localisation</p>
+    </div>
     <div class="container-info">
         <div class="text-info">
             <h2><?php the_field('title_info'); ?></h2>
@@ -70,7 +84,7 @@
         </div>
     </div>
     <div class="container-localisation">
-        <div>
+        <div class="text">
             <h2><?php the_field('title_location'); ?></h2> 
             <p><?php the_field('text_location'); ?></p> 
         </div>

@@ -770,8 +770,8 @@ body {
   .home-description {
     font-size: 18px;
     margin: 100px 5px;
-    margin-left: -20px;
-    width: 100%;
+    margin-left: 20px;
+    width: 80%;
   }
   .text-info-video-about_us h3 {
     position: relative;
@@ -935,9 +935,8 @@ body {
 .container-gite .container-info {
   display: flex;
   justify-content: space-between;
+  gap: 50px;
   margin-top: 80px;
-  margin-left: 40px;
-  margin-right: 40px;
 }
 .container-gite .text-info {
   width: 50%;
@@ -959,6 +958,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
 }
 .container-gite .picto-reserver .picto {
   display: flex;
@@ -985,8 +985,14 @@ body {
   font-family: montserrat-semibold;
   font-size: 24px;
   margin-bottom: 20px;
+  text-align: center;
 }
-.container-gite .picto-reserver .reserver .button a {
+.container-gite .picto-reserver .reserver .button {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.container-gite .picto-reserver .reserver a {
   font-family: montserrat-regular;
   font-size: 14px;
   text-decoration: none;
@@ -998,6 +1004,8 @@ body {
   padding-right: 15px;
   border-radius: 5px;
   font-weight: 100;
+  margin-right: 15px;
+  margin-bottom: 10px;
 }
 .container-gite .picto-reserver .reserver .button a:nth-child(3) {
   background-color: #9A4837;
@@ -1006,13 +1014,12 @@ body {
   display: flex;
   align-items: center;
   margin-top: 80px;
-  margin-left: 40px;
   margin-right: 40px;
   padding-bottom: 100px;
   width: 100%;
 }
 .container-gite .container-localisation .text {
-  width: 40%;
+  width: 50%;
 }
 .container-gite .container-localisation p {
   font-size: 14px;
@@ -1020,6 +1027,12 @@ body {
   width: 80%;
   line-height: 28px;
   margin-top: 40px;
+}
+.container-gite .container-localisation .maps {
+  width: 50%;
+}
+.container-gite .container-localisation .maps iframe {
+  width: 100%;
 }
 .container-gite .container-carousel-background {
   position: fixed;
@@ -1067,7 +1080,147 @@ body {
   width: 100%;
   height: 100%;
 }
+.container-gite .container-carousel-responsive {
+  display: none;
+}
 
+@media screen and (max-width: 1300px) {
+  .container-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    margin-top: 80px;
+    margin-left: -70px;
+    margin-right: -70px;
+  }
+  .container-localisation {
+    margin-right: -40px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .container-gite {
+    width: 100vw;
+    margin: 0 0;
+    margin-top: 100px;
+  }
+  .container-gite h1:not(span) {
+    font-size: 20px;
+  }
+  .container-gite span {
+    font-size: 70px;
+  }
+  .container-gite h2 {
+    position: relative;
+    font-family: montserrat-semibold;
+    font-size: 20px;
+    display: none;
+  }
+  .container-gite .container-img-gallery {
+    display: none;
+  }
+  .container-gite .container-carousel-responsive {
+    display: block;
+    position: relative;
+    top: 50px;
+    width: 100%;
+    height: 50vh;
+  }
+  .container-gite .container-carousel-responsive .carousel-responsive {
+    width: 100%;
+    height: 100%;
+  }
+  .container-gite .container-carousel-responsive .carousel-cell {
+    width: 100%;
+    height: 100%;
+  }
+  .container-gite .container-carousel-responsive .carousel-cell img {
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+  }
+  .container-gite .menu-responsive {
+    margin-top: 120px;
+    display: flex;
+    justify-content: space-around;
+  }
+  .container-gite .menu-responsive p {
+    font-family: montserrat-semibold;
+    font-size: 10px;
+  }
+  .container-gite .container-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0;
+    margin-top: 0;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .container-gite .text-info {
+    margin-top: 80px;
+    margin-bottom: 60px;
+    display: none;
+    width: 100%;
+  }
+  .container-gite .text-info .list {
+    margin-top: 0;
+  }
+  .container-gite .text-info .list h4 {
+    font-family: montserrat-semibold;
+    font-size: 11px;
+    margin-bottom: 15px;
+  }
+  .container-gite .text-info .list li {
+    font-size: 11px;
+    font-family: montserrat-medium;
+    margin-left: 20px;
+    margin-bottom: 5px;
+  }
+  .container-gite .picto-reserver {
+    display: none;
+  }
+  .container-gite .picto-reserver .picto {
+    margin-top: 80px;
+    justify-content: center;
+  }
+  .container-gite .picto-reserver .picto ul li {
+    font-size: 11px;
+  }
+  .container-gite .picto-reserver .picto ul li img {
+    width: 20px;
+    height: 20px;
+  }
+  .container-gite .picto-reserver .reserver {
+    display: none;
+  }
+  .container-gite .container-localisation {
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 80px;
+    padding-bottom: 100px;
+    text-align: center;
+    width: 80%;
+  }
+  .container-gite .container-localisation .text {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .container-gite .container-localisation p {
+    font-size: 11px;
+    font-family: montserrat-medium;
+    width: 100%;
+    line-height: 28px;
+    margin-top: 40px;
+  }
+  .container-gite .container-localisation .maps {
+    width: 100%;
+  }
+  .container-gite .container-localisation .maps iframe {
+    width: 100%;
+  }
+}
 .container-activity {
   margin-top: 130px;
   margin-left: 10px;
@@ -1121,6 +1274,7 @@ body {
   max-width: 100%;
   height: auto;
   transition: all 0.5s ease;
+  object-fit: cover;
 }
 .container-activity .grid-item .text {
   position: absolute;
@@ -1199,6 +1353,9 @@ body {
     margin-bottom: 15px;
     overflow: hidden;
     font-size: 0;
+  }
+  .container-activity .grid-item .text {
+    width: 90%;
   }
   .grid-item--width2 {
     width: 100%;
@@ -1455,7 +1612,7 @@ footer a {
     justify-content: center;
     position: relative;
     width: 100vw;
-    height: auto;
+    height: 20vh;
     background-color: #9A4837;
     color: white;
     font-family: montserrat-medium;
@@ -1465,11 +1622,18 @@ footer a {
     top: inherit;
     left: inherit;
     transform: translateY(0);
+    width: 80%;
+    margin: 0 auto;
   }
   footer a {
+    display: flex;
     text-decoration: none;
     color: white;
     padding: 10px;
+    font-size: 11px;
+  }
+  footer p {
+    font-size: 11px;
   }
 }
 
